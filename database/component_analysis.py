@@ -35,16 +35,16 @@ def count_word_forms(database_file):
     # Close the database connection
     conn.close()
 
-    # Get the top 5 most common word form counts for Ukrainian phrases
-    top_5_ukr = ukr_word_forms_counter.most_common(5)
-    print("\nTop 5 most common word form counts for Ukrainian phrases:")
-    for count, freq in top_5_ukr:
+    # Get all most common word form counts for Ukrainian phrases
+    all_ukr = ukr_word_forms_counter.most_common()
+    print("\nAll most common word form counts for Ukrainian phrases:")
+    for count, freq in all_ukr:
         print(f"{count} word forms: {freq} occurrences")
 
-    # Get the top 5 most common word form counts for English phrases
-    top_5_eng = eng_word_forms_counter.most_common(5)
-    print("\nTop 5 most common word form counts for English phrases:")
-    for count, freq in top_5_eng:
+    # Get all most common word form counts for English phrases
+    all_eng = eng_word_forms_counter.most_common()
+    print("\nAll most common word form counts for English phrases:")
+    for count, freq in all_eng:
         print(f"{count} word forms: {freq} occurrences")
 
 
